@@ -1,0 +1,5 @@
+webapp:
+  image: nuxt-init
+  restart: unless-stopped
+  ports:
+    - "5000:5000"
