@@ -76,14 +76,39 @@
   </v-row>
 </template>
 
-<script>
+<script lang="ts">
+import {
+  Component,
+  Vue
+} from 'nuxt-property-decorator'
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
-export default {
+@Component({
   components: {
-    Logo,
-    VuetifyLogo
+    Logo, VuetifyLogo
   }
+})
+export default class IndexPage extends Vue {
+  // Data
+  clipped = false
+  drawer = false
+  fixed = false
+  miniVariant = false
+  right = true
+  rightDrawer = false
+  title = 'Vuetify.js'
+  items = [
+    {
+      icon: 'mdi-apps',
+      title: 'Welcome',
+      to: '/'
+    },
+    {
+      icon: 'mdi-chart-bubble',
+      title: 'Inspire',
+      to: '/inspire'
+    }
+  ]
 }
 </script>

@@ -88,30 +88,33 @@
   </v-app>
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+<script lang="ts">
+import {
+  Component,
+  Vue
+} from 'nuxt-property-decorator'
+
+@Component
+export default class Default extends Vue {
+  // Data
+  clipped = false
+  drawer = false
+  fixed = false
+  miniVariant = false
+  right = true
+  rightDrawer = false
+  title = 'Vuetify.js'
+  items = [
+    {
+      icon: 'mdi-apps',
+      title: 'Welcome',
+      to: '/'
+    },
+    {
+      icon: 'mdi-chart-bubble',
+      title: 'Inspire',
+      to: '/inspire'
     }
-  }
+  ]
 }
 </script>
